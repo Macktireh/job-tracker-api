@@ -56,7 +56,7 @@ Each job entry contains:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/job-tracker-api.git
+   git clone https://github.com/Macktireh/job-tracker-api.git
    cd job-tracker-api
    ```
 
@@ -67,22 +67,22 @@ Each job entry contains:
 
 3. Login to your Cloudflare account:
    ```bash
-   wrangler login
+   npx wrangler login
    ```
 
 4. Create a D1 database:
    ```bash
-   wrangler d1 create job-tracker-db
+   npx wrangler d1 create job-tracker
    ```
 
-5. Take note of the database ID and update your `wrangler.toml` file:
+5. Take note of the database ID and update your `wrangler.json` file:
    ```json
    {
      "d1_databases": [
        {
          "binding": "DB",
          "database_name": "job-tracker",
-         "database_id": "ba05cc99-8434-4de7-aafc-402fd92b879b"
+         "database_id": "YOUR_DATABASE_ID"
        }
      ]
    }
