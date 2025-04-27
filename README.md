@@ -127,4 +127,4 @@ MIT
 
 ## Acknowledgments
 
-This project is based on the [Cloudflare Workers OpenAPI 3.1](https://github.com/cloudflare/chanfana) template.
+This project is based on the [Cloudflare Workers OpenAPI 3.1](https://github.com/cloudflare/workers-sdk/tree/main/packages/create-cloudflare/templates/openapi/ts) template.
