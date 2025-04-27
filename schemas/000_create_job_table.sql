@@ -11,4 +11,5 @@ CREATE TABLE IF NOT EXISTS jobs (
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-CREATE INDEX idx_jobs_post_id ON jobs (id);
+CREATE INDEX idx_jobs_id ON jobs (id);
+CREATE INDEX idx_jobs_url ON jobs (url);
