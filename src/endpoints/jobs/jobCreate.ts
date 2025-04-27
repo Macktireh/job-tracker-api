@@ -55,7 +55,7 @@ export class JobCreate extends OpenAPIRoute {
             schema: z.object({
               message: Str({
                 description: "Error message",
-                example: "Job already in use",
+                example: "Job already exists with this URL",
               }),
             }),
           },

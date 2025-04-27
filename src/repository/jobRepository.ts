@@ -10,7 +10,7 @@ export class JobRepository {
 
   public async createJob(jobToCreate: CreateJobType): Promise<JobType> {
     if (await this.existsByUrl(jobToCreate.url)) {
-      throw new ConflictError("Job already in use");
+      throw new ConflictError("Job already exists with this URL");
     }
 
     const { success, results } = await this.db
