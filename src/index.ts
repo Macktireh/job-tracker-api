@@ -8,8 +8,9 @@ const app = new Hono<{ Bindings: Env }>();
 
 // Setup OpenAPI registry
 const openapi = fromHono(app, {
-  docs_url: "/",
-  redoc_url: "/redoc",
+  redoc_url: "/",
+  docs_url: "/swagger",
+  openapi_url: "/openapi.json",
 });
 
 // Register Jobs endpoints
