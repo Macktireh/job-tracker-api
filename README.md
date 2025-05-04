@@ -114,6 +114,14 @@ Visit `http://localhost:8787/` to see the Swagger UI where you can test the endp
    npm run deploy
    ```
 
+> [!NOTE]
+> In production, the API will use the production environment variables, allowing CORS requests from the configured domains in `ALLOWED_ORIGINS`.
+> ```json
+>    "vars": {
+>      "ALLOWED_ORIGINS": "production.example.com"
+>    },
+> ```
+
 ## License
 
 MIT
