@@ -88,38 +88,31 @@ Each job entry contains:
    }
    ```
 
-6. Initialize the database schema:
-   ```bash
-   npx wrangler d1 execute job-tracker --remote --file schemas/000_create_job_table.sql
-   ```
-
 ### Development
 
-Start a local development server:
+1. Initialize the database schema locally:
+   ```bash
+   npx wrangler d1 execute job-tracker --local --file schemas/000_create_job_table.sql
+   ```
 
-```bash
-npm run dev
-```
+2. Start a local development server:
+   ```bash
+   npm run dev
+   ```
 
 Visit `http://localhost:8787/` to see the Swagger UI where you can test the endpoints.
 
 ### Deployment
 
-Deploy to Cloudflare Workers:
+1. Initialize the database schema in production:
+   ```bash
+   npx wrangler d1 execute job-tracker --remote --file schemas/000_create_job_table.sql
+   ```
 
-```bash
-npm run deploy
-```
-
-## Error Handling
-
-The API handles various error scenarios:
-
-- `400 Bad Request`: Invalid input data
-- `401 Unauthorized`: Authentication failure
-- `404 Not Found`: Resource not found
-- `409 Conflict`: Resource already exists
-- `500 Internal Server Error`: Server-side errors
+2. Deploy to Cloudflare Workers:
+   ```bash
+   npm run deploy
+   ```
 
 ## License
 
